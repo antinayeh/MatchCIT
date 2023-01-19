@@ -16,8 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <body>
          <div>
-            <form id = "form" action="localhost:5000/api/signup" method="POST">
-                <div class="page page-1">
+            <form id="form" action="http://127.0.0.1:5000/api/signup" method="POST">
+                <div class="page page-1 active">
                     <div class="d-flex flex-row">
                         <div class="border">
                         </div>
@@ -299,9 +299,9 @@
                                 
                             </div>
                             <div class="answer-div">
-                                <input type="radio" id="Feminine Charm" name="aesthetic">
+                                <input type="radio" id="Feminine Charm" name="aesthetic-fc">
                                 <label for="aesthetic" class="question-text" style="margin-left: 8px">Feminine Charm </label>
-                                <input type="radio" id="Fresh Lavender" name="aesthetic" style="margin-left: 130px">
+                                <input type="radio" id="Fresh Lavender" name="aesthetic-fl" style="margin-left: 130px">
                                 <label for="aesthetic" class="question-text" style="margin-left: 8px">Fresh Lavender </label>
                                 
                             </div>
@@ -310,9 +310,9 @@
                                 <img src="./images/color-4.png" class="photo">
                             </div>
                             <div class="answer-div">
-                                <input type="radio" id="Rustic Feels" name="aesthetic">
+                                <input type="radio" id="Rustic Feels" name="aesthetic-r">
                                 <label for="aesthetic" class="question-text" style="margin-left: 8px">Rustic Feels </label>
-                                <input type="radio" id="The Minimalist" name="aesthetic" style="margin-left: 170px">
+                                <input type="radio" id="The Minimalist" name="aesthetic-m" style="margin-left: 170px">
                                 <label for="aesthetic" class="question-text" style="margin-left: 8px">The Minimalist </label>
                             </div>
                             <div class="button-div" style="margin-left: 300px">
@@ -324,7 +324,7 @@
                     </div>
                 </div>
 
-                <div class="page page-8 active">
+                <div class="page page-8">
                     <div class="d-flex flex-row">
                         <div class="border">
                         </div>
@@ -392,8 +392,9 @@
                             </div>
                             <div class="button-div">
                                 <button type="button" class="prev-btn">Previous</button>
-                                <button type="submit" class="submit-btn" onclick="window.location = 'matches.html'">Submit Form!</button>
-                                
+                                <button type="submit" class="submit-btn" onclick="window.location.href='matches.html'">Submit Form!</button>
+
+                                <!-- <button type="submit" class="submit-btn">Submit Form!</button> -->
                             </div>
                         </div>
                         <img src="./images/logo.png" class="logo" style="margin: auto">

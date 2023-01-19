@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Nova+Flat&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href= "{{ url_for('static',filename='styles.css') }}">
         <title>
             MatchCIT
         </title>
@@ -16,13 +16,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <body>
-        <img src="/images/logo.png" class="logo">
+        <img src="{{ url_for('static',filename='logo.png') }}" class="logo">
         <div class="main-title-text"> 
             Thank you! 
         </div>
         <div class="ending-text">
             Let the matchmaking begin!<br>
-            Check your emails on <span style=color:black>Feburary 1st 2023</span> to recieve your matches!
+            Check your emails on <span style=color:black>Feburary 1st 2023</span> to receive your matches!
         </div>
     </body>
 </html>

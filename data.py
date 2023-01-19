@@ -9,7 +9,7 @@ from config import DB_NAME, sender_email, sender_password
 match_result_filename = 'match_result.csv'
 
 def create_app(db):
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="./static", template_folder="./")
     app.config['SECRET_KEY'] = 'hello ha'
     
     # Initialize database

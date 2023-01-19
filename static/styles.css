@@ -1,0 +1,146 @@
+.page {
+    display: none;
+  }
+
+.page.active {
+    display: block;
+  }
+
+.border{
+    background-color: rgb(166, 84, 166);
+    width: 200px;
+    min-height: 100vh;
+}
+
+.right-border{
+    width: 200px;
+    min-height: 100vh;
+}
+.question-div{
+    margin-top: 30px;
+    margin-left: 200px;
+    display: flex;
+}
+.answer-div{
+    margin-top: 15px;
+    margin-left: 200px;
+    display: flex;
+}
+
+.button-div{
+    display: block;
+    margin-top: 70px;
+    margin-left: 200px;
+    display: flex;
+}
+
+.main-title-text{
+    color: rgb(166, 84, 166);
+    font-family: 'Monofett', cursive;
+    font-size: 120px;
+    text-align: center;
+}
+.title-text{
+    color: rgb(166, 84, 166);
+    font-family: 'Monofett', cursive;
+    font-size: 100px;
+    margin-left: 150px;
+    text-align: left;
+    display: flex;
+}
+
+.question-text, .ending-text, .mbti-text{
+    font-family: 'Nova Flat';
+    color: rgb(166, 84, 166);
+}
+
+
+.question-text{
+    font-size: 23px;
+    padding: 3px;
+}
+
+
+.helper-text{
+    font-size: 14px;
+    color: black;
+    margin: none;
+}
+
+.ending-text{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mbti-text{
+    font-size: 28px;
+    text-align: center;
+}
+
+
+.multiple-choice-options, .survey-form-input{
+    font-size: 22px;
+    font-family: 'Nova Flat';
+    border-style: none;
+    border-bottom-style: solid;
+    border-color: rgb(166, 84, 166);
+    float: left;
+}
+
+.multiple-choice-options{
+    width: 500px;
+}
+
+.check-box{
+    width: 15px;
+}
+
+.photo{
+    width: 300px;
+    height: 400px;
+    margin-right: 60px;
+}
+
+.logo{
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+    height: 220px;
+}
+
+
+.next-btn, .prev-btn, .start-btn, .return-btn, .submit-btn, .return-btn-mbti{
+    font-family: 'Nova Flat';
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px;
+    color: white;
+
+    background-color:rgb(166, 84, 166);
+    border-style: none;
+    border-radius: 50px;
+    box-shadow: 3px 4px 1px  rgba(57, 57, 57, 0.5);
+
+    height: 36px;
+    width: 150px;
+
+    margin-right: 5px;
+}
+
+.prev-btn{
+    background-color: rgb(218, 167, 248);
+}
+
+.start-btn{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 24px;
+
+
+    height: 50px;
+    line-height: 50px;
+    width: 250px;
+}

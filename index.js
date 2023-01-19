@@ -41,7 +41,8 @@ function changePage(btn) {
 
 // Form submission 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
+  window.location = 'matches.html'
   
   // const logs = [];
   // form.querySelectorAll("input").forEach((input) => {
