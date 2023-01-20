@@ -43,6 +43,19 @@ function changePage(btn) {
 form.addEventListener("submit", (e) => {
   // e.preventDefault();
   window.location = 'matches.html'
+});
+
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();  
+//   let index = 0;
+//   const active = document.querySelector(".active");
+//   index = pages.indexOf(active)
+//   if (validateForm(index)){
+//     window.location.href = 'matches.html';
+//     form.reset();
+//   }
+// });
   
   // const logs = [];
   // form.querySelectorAll("input").forEach((input) => {
@@ -64,7 +77,6 @@ form.addEventListener("submit", (e) => {
   // if (validateForm(index) == false){
   //   changePage("prev");
   // }
-});
 
 // Form Validations
 function validateForm(index) {

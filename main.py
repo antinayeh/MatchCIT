@@ -1,11 +1,14 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from flask import Response
-
+import pandas as pd
 from flask import Blueprint, render_template, request, flash, redirect, url_for
+import csv
+import sqlite3
 
 from data import create_app, create_database, read_match_result
 from mail import Match, format_email, send_email
+from test import main_algo
 
 db = SQLAlchemy()
 app = create_app(db)
@@ -196,6 +199,7 @@ def signup():
 def notify():
     # read match results from a csv file and send email notifications
     df = read_match_result()
+    # df = pd.read_excel('/Users/peiciqiu/dev/dating_app/Test_Algo_match.xlsx')
     app.logger.debug(df.head(5))
     # df.apply(lambda row: send_email(app, mail_handler, row['email'], format_email(row['name'], [
     #     Match(row['match1_name'], row['match1_email']),
@@ -206,14 +210,40 @@ def notify():
     for index, row in df.iterrows():
         name = row['name']
         email = row['email']
-        match1 = Match(row['match1_name'], row['match1_email'])
-        match2 = Match(row['match2_name'], row['match2_email'])
-        match3 = Match(row['match3_name'], row['match3_email'])
+        match1 = Match(row['Best Match 1 Name'], row['Best Match 1 Email'])
+        match2 = Match(row['Best Match 2 Name'], row['Best Match 2 Email'])
+        match3 = Match(row['Best Match 3 Name'], row['Best Match 3 Email'])
         email_content = format_email(name, [match1, match2, match3])
         send_email(app, mail_handler, email, email_content)
 
     return Response(status=200)
 
+
+
+
+@app.route('/api/match')
+def match():
+    # cnx = sqlite3.connect('database.db')
+    # df = pd.read_sql_query("SELECT * FROM user", cnx)
+    df = pd.read_excel('/Users/peiciqiu/dev/dating_app/Test_Algo_match_new.xlsx')
+    groups = main_algo(df)
+    matches = [['name', 'email', 'Best Match 1 Name', 'Best Match 1 Email', 'Best Match 2 Name', 'Best Match 2 Email', 'Best Match 3 Name', 'Best Match 3 Email']]
+    for group in groups.values():
+        for _, row in group.iterrows():
+            name = row['name']
+            email = row['email']
+            match1_name = row['Best Match 1 Name']
+            match1_email = row['Best Match 1 Email']
+            match2_name = row['Best Match 2 Name']
+            match2_email = row['Best Match 2 Email']
+            match3_name = row['Best Match 3 Name']
+            match3_email = row['Best Match 3 Email']
+            curr_match = [name, email, match1_name, match1_email, match2_name, match2_email, match3_name, match3_email]
+            matches.append(curr_match)
+    with open('output.csv', 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerows(matches)
+    return Response(status=200)
 
 
 

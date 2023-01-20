@@ -6,7 +6,7 @@ import pandas as pd
 from config import DB_NAME, sender_email, sender_password
 
 
-match_result_filename = 'match_result.csv'
+match_result_filename = 'output.csv'
 
 def create_app(db):
     app = Flask(__name__, static_folder="./static", template_folder="./")
