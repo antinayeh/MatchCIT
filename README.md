@@ -33,5 +33,14 @@ We differently paired people based on their physical appearance and personality.
 * Backend: Python Flask, Postman API 
 * Database: SQLite
 
+## Execution Flow: 
+* User fills out the survey
+* Frontend sends survey responses in HTML Form data by HTTP POST request to backend api /api/signup
+* Backend receives the data and stores in user table of a local SQLite database instance
+* Admin triggers matching process by sending GET request to backend api /api/match
+* Backend loads survey data from database, generates matches for everyone, stores the match results in a csv file
+* Admin triggers notification process by sending GET request to backend api /api/notify
+* Backend loads match results from the csv file and sends out emails
+
 ## Demo: 
 * Watch our demo video [here](https://www.youtube.com/watch?v=RrXoyc01ezg)! <br />
