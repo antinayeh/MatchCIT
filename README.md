@@ -1,5 +1,5 @@
 # Match CIT: 
-A web app that helps MCIT students find true love
+A web app that helps MCIT students find true love.
 ## Collaboraters: 
 * [Peici Qiu](https://github.com/peiciqiu) 
 * [Antina Yeh](https://github.com/antinayeh)
@@ -15,10 +15,8 @@ Through Match CIT, students can fill out a curated survey asking them about thei
 
 ## Tech Stack:
 * Frontend: HTML, CSS, Javascript 
-* Backend: Flask, Postman API 
 * Backend: Python Flask, Postman API 
 * Database: SQLite
 
 ## Demo: 
-* [Watch our demo video here!] <br />
-* [Link to Match CIT] 
+* Watch our demo video [here](https://www.youtube.com/watch?v=RrXoyc01ezg)! <br />
