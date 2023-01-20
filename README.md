@@ -14,7 +14,7 @@ Through Match CIT, students can fill out a curated survey asking them about thei
 * Frontend sends survey responses in HTML Form data by HTTP POST request to backend api /api/signup
 * Backend receives the data and stores in user table of a local SQLite database instance
 * Admin triggers matching process by sending GET request to backend api /api/match
-* Backend loads survey data from database, generates matches for everyone, stores the match results in a csv file
+* Backend loads survey data from database, generates matches and stores the match results in a csv file
 * Admin triggers notification process by sending GET request to backend api /api/notify
 * Backend loads match results from the csv file and sends out emails
 ## Algorithm: 
